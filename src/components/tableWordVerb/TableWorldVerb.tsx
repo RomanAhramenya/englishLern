@@ -52,7 +52,16 @@ function TableWordVerb() {
                         </div>
 
                     </td>
-                    <th className={`${s.rotation} ${active === 1 || active === 2 || active === 3 ? s.active : ''}`}>БУДУЩЕЕ</th>
+                    <th className={` ${active === 1 || active === 2 || active === 3 ? s.active : ''}`}>
+                        
+                        <div>Б</div>
+                        <div>У</div>
+                        <div>Д</div>
+                        <div>У</div>
+                        <div>Щ</div>
+                        <div>Е</div>
+                        <div>Е</div>
+                        </th>
                 </tr>
 
                 <tr>
@@ -87,7 +96,18 @@ function TableWordVerb() {
                         </div>
 
                     </td>
-                    <th className={`${s.rotation} ${active === 4 || active === 5 || active === 6 ? s.active : ''}`}>НАСТОЯЩЕЕ</th>
+                    <th className={` ${active === 4 || active === 5 || active === 6 ? s.active : ''}`}>
+                        
+                        <div>Н</div>
+                        <div>А</div>
+                        <div>С</div>
+                        <div>Т</div>
+                        <div>О</div>
+                        <div>Я</div>
+                        <div>Щ</div>
+                        <div>Е</div>
+                        <div>Е</div>
+                        </th>
                 </tr>
 
                 <tr>
@@ -115,7 +135,17 @@ function TableWordVerb() {
                         </div>
 
                     </td>
-                    <th className={`${s.rotation} ${active === 7 || active === 8 || active === 9 ? s.active : ''}`}>ПРОШЕДШЕЕ</th>
+                    <th className={` ${active === 7 || active === 8 || active === 9 ? s.active : ''}`}>
+                    <div>П</div>
+                    <div>Р</div>
+                    <div>О</div>
+                    <div>Ш</div>
+                    <div>Е</div>
+                    <div>Д</div>
+                    <div>Ш</div>
+                    <div>Е</div>
+                    <div>Е</div>
+                    </th>
                 </tr>
                 </tbody>
                 <tfoot></tfoot>
