@@ -1,9 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.12,
-* Autoprefixer: v10.4.4
-* Browsers: last 4 version
-*/
+
 
 .table {
     font-family: 'Roboto', sans-serif;
@@ -19,6 +14,9 @@
    ul{
        list-style: none;
        font-weight: 700;
+       li{
+           margin-right: 1rem;
+       }
    } 
    .pronoun{
        color: rgb(78, 66, 66);
@@ -59,43 +57,43 @@
             flex-direction: column;
    margin: 0.5rem;
    div:first-child{
-       margin: 0 2rem 3rem 0;
+       margin: 0 1.5rem 3rem 0;
    }
 }
 // animation 
 .active{
     color: orangered;
 }
-@media (max-width: 730px){
-    table{
-        font-size: 0.5rem;
-    }
-}
-@media (max-width: 730px){
-    table{
-        font-size: 0.5rem;
-    }
-}
-@media (max-width: 500px){
-    table{
-        font-size: 0.3rem;
-    }
-    tr,td,th{
-        
-        padding: 0rem;
-    }
-    .vertical{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-       margin: 0 0.3rem 0 0;
-       div:first-child{
-           margin: 0 0 3rem 0;
+@media (max-width:500px){
+    tr{
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
        }
-    }
+       th{
+           display: none;
+       }
+       td {
+        display: block; 
+        -webkit-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s;
+       &:hover{
+           background-color:rgb(0, 255, 85);
+       } 
+        &:first-child {
+          padding-top: .5em;
+        }
+        &:last-child {
+          padding-bottom: .5em;
+        }
     
+        &:before {
+          content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+          font-weight: bold;
+    
+          // optional stuff to make it look nicer
+          width: 6.5em; // magic number :( adjust according to your own content
+          display: inline-block;
+          // end options
+        }}
 }

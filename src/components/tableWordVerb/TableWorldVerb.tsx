@@ -30,7 +30,7 @@ function TableWordVerb() {
                 </thead>
                 <tbody>
                     <tr>
-                    <td onMouseMove={()=>setActive(1)} onMouseOut={()=>setActive(0)} className={s.QW}>
+                    <td data-th='Вопрос в будущем' onMouseMove={()=>setActive(1)} onMouseOut={()=>setActive(0)} className={s.QW}>
                         <div className={s.flex}>
                             <div>Will</div>
                             <Pronouns />
@@ -38,14 +38,14 @@ function TableWordVerb() {
                         </div>
 
                     </td>
-                    <td onMouseMove={()=>setActive(2)} onMouseOut={()=>setActive(0)}>
+                    <td data-th='Утверждение в будущем' onMouseMove={()=>setActive(2)} onMouseOut={()=>setActive(0)}>
                         <div className={s.flex}>
                             <Pronouns />
                             <div>WILL LOVE</div>
                         </div>
 
                     </td>
-                    <td onMouseMove={()=>setActive(3)} onMouseOut={()=>setActive(0)}>
+                    <td data-th='Отрицание в будущем' onMouseMove={()=>setActive(3)} onMouseOut={()=>setActive(0)}>
                         <div className={s.flex}>
                             <Pronouns />
                             <div>WILL NOT LOVE</div>
@@ -65,7 +65,7 @@ function TableWordVerb() {
                 </tr>
 
                 <tr>
-                    <td onMouseMove={()=>setActive(4)} onMouseOut={()=>setActive(0)}>
+                    <td data-th='Вопрос в настоящем' onMouseMove={()=>setActive(4)} onMouseOut={()=>setActive(0)}>
                         <div className={s.flex}>
                             <div className={s.vertical}>
                                 <div>DO</div>
@@ -76,7 +76,7 @@ function TableWordVerb() {
                         </div>
 
                     </td>
-                    <td onMouseMove={()=>setActive(5)} onMouseOut={()=>setActive(0)}>
+                    <td data-th='Утверждение в настоящем' onMouseMove={()=>setActive(5)} onMouseOut={()=>setActive(0)}>
                         <div className={s.flex}>
                             <Pronouns />
                             <div className={s.vertical}>
@@ -86,7 +86,7 @@ function TableWordVerb() {
                         </div>
 
                     </td>
-                    <td onMouseMove={()=>setActive(6)} onMouseOut={()=>setActive(0)}>
+                    <td data-th='Отрицание в настоящем' onMouseMove={()=>setActive(6)} onMouseOut={()=>setActive(0)}>
                         <div className={s.flex}>
                             <Pronouns />
                             <div className={s.vertical}>
@@ -111,7 +111,7 @@ function TableWordVerb() {
                 </tr>
 
                 <tr>
-                    <td onMouseMove={()=>setActive(7)} onMouseOut={()=>setActive(0)}>
+                    <td data-th='Вопрос в прошедшем' onMouseMove={()=>setActive(7)} onMouseOut={()=>setActive(0)}>
                         <div className={s.flex}>
                             <div>
                                 DID
@@ -121,14 +121,14 @@ function TableWordVerb() {
                         </div>
 
                     </td>
-                    <td onMouseMove={()=>setActive(8)} onMouseOut={()=>setActive(0)}>
+                    <td data-th='Утверждение в прошедшем' onMouseMove={()=>setActive(8)} onMouseOut={()=>setActive(0)}>
                         <div className={s.flex}>
                             <Pronouns />
                             <div>LOVED</div>
                         </div>
 
                     </td>
-                    <td onMouseMove={()=>setActive(9)} onMouseOut={()=>setActive(0)}>
+                    <td data-th='Отрицание в прошедшем' onMouseMove={()=>setActive(9)} onMouseOut={()=>setActive(0)}>
                         <div className={s.flex}>
                             <Pronouns />
                             <div>DID NOT LOVE</div>
