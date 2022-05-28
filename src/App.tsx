@@ -9,7 +9,7 @@ import Lesson3 from './pages/lesson3/Lesson3';
 
 function App() {
   return (
-   <Routes>
+   <Routes >
      <Route path='/' element={<Layout/>}>
         <Route index element={<Lesson1/>}/>
         <Route path='lesson2' element={<Lesson2/>}/>

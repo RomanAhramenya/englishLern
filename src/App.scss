@@ -13,6 +13,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body {
   background-color: rgba(0, 255, 34, 0.185);
   overflow-x: hidden;
@@ -145,6 +148,25 @@ body {
   h1 {
     margin: 1rem;
   }
+}
+.scroll_button{
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    margin-top: 1rem;
+    background-color: rgba(29, 240, 1, 0.836);
+    padding:0.5rem 1rem;
+    border:none;
+    transition: all 0.25s;
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(241, 159, 8, 0.911);
+    }
+    a{
+        color:orangered;
+        letter-spacing: 0.1rem;
+        text-decoration: none;
+    }
 }
 @-webkit-keyframes modal {
     0%{top:-5rem;left:-5rem;opacity: 0;}
