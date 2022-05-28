@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(0, 255, 34, 0.185)
+}
+.MainContainer{
+    width: 95%;
+    margin: 1rem  auto;
+    display: grid;
+    grid-template-columns: minmax(100px,200px) auto;
+    grid-template-rows: 50px 6fr 1fr;
+    grid-gap: 0.5rem;
+    grid-template-areas: 
+    "h h"
+    "n c"
+    "f f"
+    ;
+    header {
+        background-color: rgba(29, 240, 1, 0.836);
+        grid-area: h;
+        border-radius: 1rem;
+    }
+    nav{
+        
+        grid-area: n;
+        
+        a{
+            display:block;
+            padding: 1rem;
+            text-decoration: none;
+            transition: background-color 0.25s;
+            color:black;
+            &:hover{
+                background-color:rgba(0, 255, 55, 0.397)
+            }
+            &:active{
+                color: black;
+            }
+        }
+    }
+    main{
+        grid-area: c;
+        background-color:rgba(0, 0, 255, 0.212)
+    }
+    footer{
+        grid-area: f;
+        background-color:yellow
+    }
+}
+.video{
+    margin: 1rem 0;
+    iframe{
+        width: 20rem;
+        height: 15rem;
+    }
+}
+.flex{
+    display: flex;
+    justify-content:space-between;
+}
+.title__lesson{
+    margin-left: 1rem ;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    
+    h1{
+        margin: 1rem;
+    }
+}
