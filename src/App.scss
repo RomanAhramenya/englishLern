@@ -127,13 +127,14 @@ body {
     display: none;
   }
   .MainContainer {
-    grid-template-columns: auto;
+     
+    grid-template-columns: 85%;
     grid-template-rows: 50px 6fr 1fr;
     grid-template-areas:
       " h"
       "c"
       " f";
-      width: 100%;
+      justify-content: center;
   }
   .burger.burger {
     display: block;
