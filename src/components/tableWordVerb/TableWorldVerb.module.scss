@@ -1,7 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 .table {
     font-family: 'Roboto', sans-serif;
     table{
         margin: 0 auto;
+        -webkit-transition: all 0.25s;
+        -o-transition: all 0.25s;
         transition: all 0.25s;
     &:hover{
         background-color:rgba(0, 0, 0, 0.747)
@@ -19,22 +28,35 @@
        padding: 1rem;
    }
    td{
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
     transition: all 0.25s;
    &:hover{
        background-color:rgb(0, 255, 85);
    } 
 }
    .flex{
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: space-between;
-   align-items: center;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
    }
    
   
 }
 .vertical{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
    margin: 0.5rem;
    div:first-child{
        margin: 0 2rem 3rem 0;
@@ -63,8 +85,13 @@
         padding: 0rem;
     }
     .vertical{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
        margin: 0 0.3rem 0 0;
        div:first-child{
            margin: 0 0 3rem 0;
