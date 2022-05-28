@@ -30,7 +30,9 @@
    align-items: center;
    }
    .rotation{
-    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
     text-align: center;
     font-weight: 900;
     letter-spacing: 0.2rem;
