@@ -65,7 +65,8 @@
     color: orangered;
 }
 @media (max-width:500px){
-    tr{
+    .table{
+        tr{
         border-top: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
        }
@@ -96,4 +97,6 @@
           display: inline-block;
           // end options
         }}
+    }
+    
 }
