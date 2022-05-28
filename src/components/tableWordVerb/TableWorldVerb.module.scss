@@ -1,6 +1,7 @@
 .table {
     font-family: 'Roboto', sans-serif;
     table{
+        margin: 0 auto;
         transition: all 0.25s;
     &:hover{
         background-color:rgba(0, 0, 0, 0.747)
@@ -46,4 +47,29 @@
 // animation 
 .active{
     color: orangered;
+}
+@media (max-width: 730px){
+    table{
+        font-size: 0.5rem;
+    }
+}
+@media (max-width: 730px){
+    table{
+        font-size: 0.5rem;
+    }
+}
+@media (max-width: 500px){
+    tr,td,th{
+        
+        padding: 0rem;
+    }
+    .vertical{
+        display: flex;
+        flex-direction: column;
+       margin: 0 0.3rem 0 0;
+       div:first-child{
+           margin: 0 0 3rem 0;
+       }
+    }
+    
 }

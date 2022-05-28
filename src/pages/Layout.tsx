@@ -8,9 +8,11 @@ function Layout() {
     <div className='MainContainer'>
         <Header/>
         <nav>
+          <div className='full'>
             <CustomLink to='/'>Урок №1</CustomLink>
             <CustomLink to='/lesson2'>Урок №2</CustomLink>
             <CustomLink to='/lesson3'>Урок №3</CustomLink>
+          </div>
         </nav>
         <main>
             <Outlet/>

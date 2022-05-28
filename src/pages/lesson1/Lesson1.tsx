@@ -32,7 +32,7 @@ const Lesson1:FC = () => {
       </div>
       
       </div>
-      <div className='flex'>
+      <div className='flex_block'>
         <TableWorldVerb/>
       <WorldLesson data={worlds}/>
       </div>
