@@ -1,5 +1,6 @@
 import React from 'react'
 import { FC } from 'react'
+import LessonPageRepeat from '../../components/lessonPageRepeat/LessonPageRepeat'
 import Quiz from '../../components/quiz/Quiz'
 import TableWorldVerb from '../../components/tableWordVerb/TableWorldVerb'
 import WorldLesson from '../../components/worldLesson/WorldLesson'
@@ -49,26 +50,18 @@ const data = [
 const Lesson1:FC = () => {
   return (
     <div className={s.container}>
-      <div className='flex'>
-        <div className='video'>
-      <iframe  src="https://www.youtube.com/embed/9blL5gYzsaA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      </div>
-      <div className='title__lesson' >
-      <h1>Урок №1</h1>
-      <p>В первом уроке Дмитрия Петрова, вы узнаете о правильных и неправильных глаголах и о основной базовой схеме в его методике изучения английского языка. Уже на старте обучения вы научитесь строить простые английские предложения для того, чтобы спрашивать, задавать вопросы и утверждать, используя при этом короткие английские фразы.</p>
-      <button className='scroll_button'><a href="#tra">Тренеровка</a></button>
-      </div>
-      
-      </div>
-      
-      <div className='flex_block'>
+      <LessonPageRepeat 
+      title='Урок №1'
+      url='https://www.youtube.com/embed/9blL5gYzsaA'
+      paragaph='В первом уроке Дмитрия Петрова, вы узнаете о правильных и неправильных глаголах и о основной базовой схеме в его методике изучения английского языка. Уже на старте обучения вы научитесь строить простые английские предложения для того, чтобы спрашивать, задавать вопросы и утверждать, используя при этом короткие английские фразы.'
+      state={data}
+     >
+        <div className='flex_block'>
         <TableWorldVerb/>
       <WorldLesson data={worlds}/>
       </div>
-      <div id='tra'>
-        <Quiz data={data}/>
-      </div>
-      
+      </LessonPageRepeat>
+    
     </div>
   )
 }

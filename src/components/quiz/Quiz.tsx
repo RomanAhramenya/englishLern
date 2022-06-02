@@ -5,7 +5,7 @@ import Game from './Game'
 import Menu from './Menu'
 import { QuizContext } from './QuizContext'
 import s from './Quiz.module.css'
-interface IData{
+export interface IData{
     prompt:string
     optionA:string,
     optionB:string,

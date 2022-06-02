@@ -1,0 +1,47 @@
+.container{
+    margin: 5rem auto;
+    width: 25rem;
+    height: 20rem;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    position: relative;
+  }
+  
+  
+  
+  .container input{
+    font-size: 1.5rem;
+  }
+  .container input[type='submit']{
+    border: none;
+    padding: 0.5rem 1rem;
+    border:1px solid gray;
+    cursor: pointer;
+    transition: all 0.25s;
+    border-radius:10px;
+    font-size: 1.2rem;
+  }
+  .container input[type='submit']:hover{
+    border-color: black;
+  }
+  .input_container{
+    position: relative;
+    margin: 3rem 0;
+  }
+  .error{
+    position: absolute;
+    color:red;
+    right: 0.2rem;
+    top: 2rem;
+  }
+  .container a{
+      position: absolute;
+      right: 2rem;
+      bottom: 0.5rem;
+      text-decoration: none;
+  }
