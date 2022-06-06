@@ -11,7 +11,7 @@ function RegisterPage() {
        dispatch(setUser({email,password}))
     }
   return (
-    <Form action={setRegister} title='Регестрация' link='/login' linkName='Войти'/>
+    <Form action={setRegister} title='Регистрация' link='/login' linkName='Войти'/>
   )
 }
 

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { ISetUser, setUser } from "./AuthAction"
+import { getUser, ISetUser, setUser } from "./AuthAction"
 
 interface IUser{
     email:string 
@@ -38,6 +38,21 @@ const AuthSlice = createSlice({
             state.isLoading = true
         },
         [setUser.rejected.type] : (state, action: PayloadAction<string>) => {
+            state.isLoading = false;
+            state.error = action.payload
+        },
+        [getUser.fulfilled.type] : (state,action: PayloadAction<IResponseUser>) => {
+            state.isLoading = false;
+            state.error = '';
+            state.user.email = action.payload.email
+            state.user.id = action.payload.id
+            localStorage.setItem('id',action.payload.id)
+            
+        },
+        [getUser.pending.type] : (state) => {
+            state.isLoading = true
+        },
+        [getUser.rejected.type] : (state, action: PayloadAction<string>) => {
             state.isLoading = false;
             state.error = action.payload
         }
