@@ -20,7 +20,7 @@ export const setUser = createAsyncThunk(
     }
 )
 export const loginUser = createAsyncThunk(
-    'auth/setUser',
+    'auth/loginUser',
     async (user:ISetUser,thunkApi) => {
         try {
             const response = await axios.get<any>(`https://6294c7f7a7203b3ed070ec66.mockapi.io/users?search=${user.email}`)

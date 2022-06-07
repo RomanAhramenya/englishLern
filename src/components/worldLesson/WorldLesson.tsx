@@ -1,4 +1,6 @@
 import React, { FC } from 'react'
+import { useAppDispatch } from '../../hooks/redux-hook'
+import { setWorld } from '../../store/slice/WorldAction'
 import s from './WorldLesson.module.scss'
 interface Idata {
     id: number
@@ -8,7 +10,16 @@ interface Idata {
 interface IProps {
     data: Idata[]
 }
+
 const WorldLesson: FC<IProps> = ({ data }) => {
+    const dispatch = useAppDispatch()
+    const auth = localStorage.getItem('id')
+    const buttonHandler = (world:string,translate:string,id:string) => {
+        if(auth){
+            debugger
+            dispatch(setWorld({id,world:{world,translate,id}}))
+        }
+    }
     return (
         <div className={s.container}>
             <table>
@@ -21,7 +32,7 @@ const WorldLesson: FC<IProps> = ({ data }) => {
                 </thead>
                     <tbody>
                      {data.map(el => {
-                    return <tr key={el.id}><td>{el.world}</td><td>{el.translate}</td><td><button>+</button></td></tr>
+                    return <tr key={el.id}><td>{el.world}</td><td>{el.translate}</td><td><button onClick={() => buttonHandler(el.world,el.translate,String(el.id))}>+</button></td></tr>
                 })}   
                     </tbody>
                 <tfoot></tfoot>

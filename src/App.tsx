@@ -8,6 +8,7 @@ import Layout from './pages/Layout';
 import Lesson1 from './pages/lesson1/Lesson1';
 import Lesson2 from './pages/lesson2/Lesson2';
 import Lesson3 from './pages/lesson3/Lesson3';
+import World from './pages/World/World';
 import { getUser } from './store/slice/AuthAction';
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='login' element={<LoginPage/>}/>
         <Route path='lesson2' element={<Lesson2/>}/>
         <Route path='lesson3' element={<Lesson3/>}/>
+        <Route path='worlds' element={<World/>}/>
      </Route>
    </Routes>
   );
