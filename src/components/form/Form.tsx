@@ -73,7 +73,7 @@ const Form:FC<IForm> = (props) => {
       </div>
       <div className={s.input_container}>
       {(isPasswordTouched && errorPassword) && <div className={s.error}>&#9888; {errorPassword}</div>}
-        <input value={password} onChange={e=>passwordHandler(e)} onBlur={e=>onBlurHandler(e)} name='password' type='password' placeholder='Login'/>
+        <input value={password} onChange={e=>passwordHandler(e)} onBlur={e=>onBlurHandler(e)} name='password' type='password' placeholder='Password'/>
       </div>
       <div>
         <input  type='submit' value='login'/>

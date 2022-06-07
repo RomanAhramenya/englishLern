@@ -11,11 +11,11 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 body {
   background-color: rgba(0, 255, 34, 0.185);
   overflow-x: hidden;
@@ -30,7 +30,7 @@ body {
   -ms-grid-rows: 50px 0.5rem 6fr 0.5rem 1fr;
   grid-template-rows: 50px 6fr 1fr;
   grid-gap: 0.5rem;
-      grid-template-areas:
+  grid-template-areas:
     "h h"
     "n c"
     "f f";
@@ -45,8 +45,35 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-between;
+    .user {
+      margin: 0 1rem;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+    }
+    .removeUser{
+      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+      cursor:pointer;
+      transition: all 0.25s;
+      border:none
+      &:hover{
+        background-color:gray
+      }
+    }
+    .authButton {
+      margin: 0 1rem;
+      color: white;
+      text-shadow: 0 0 3px black;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      transition: color 0.25s;
+      &:hover {
+        color: black;
+      }
+    }
   }
   nav {
     -ms-grid-row: 3;
@@ -84,19 +111,19 @@ body {
   .desctop_modal {
     position: absolute;
     top: 2rem;
-    left:2rem;
+    left: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.986);
-    border-radius:10px;
+    border-radius: 10px;
     -webkit-animation: modal 0.25s linear;
-            animation: modal 0.25s linear;
+    animation: modal 0.25s linear;
     a {
       text-decoration: none;
       color: white;
@@ -129,16 +156,16 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .flex_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .title__lesson {
   margin: 1rem;
@@ -149,32 +176,48 @@ body {
     margin: 1rem;
   }
 }
-.scroll_button{
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    font-weight: 900;
-    margin-top: 1rem;
-    background-color: rgba(29, 240, 1, 0.836);
-    padding:0.5rem 1rem;
-    border:none;
-    transition: all 0.25s;
-    &:hover{
-        cursor: pointer;
-        background-color: rgba(241, 159, 8, 0.911);
-    }
-    a{
-        color:orangered;
-        letter-spacing: 0.1rem;
-        text-decoration: none;
-    }
+.scroll_button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  margin-top: 1rem;
+  background-color: rgba(29, 240, 1, 0.836);
+  padding: 0.5rem 1rem;
+  border: none;
+  transition: all 0.25s;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(241, 159, 8, 0.911);
+  }
+  a {
+    color: orangered;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+  }
 }
 @-webkit-keyframes modal {
-    0%{top:-5rem;left:-5rem;opacity: 0;}
-    100%{top:2rem;left:2rem;opacity: 1;}
+  0% {
+    top: -5rem;
+    left: -5rem;
+    opacity: 0;
+  }
+  100% {
+    top: 2rem;
+    left: 2rem;
+    opacity: 1;
+  }
 }
 @keyframes modal {
-    0%{top:-5rem;left:-5rem;opacity: 0;}
-    100%{top:2rem;left:2rem;opacity: 1;}
+  0% {
+    top: -5rem;
+    left: -5rem;
+    opacity: 0;
+  }
+  100% {
+    top: 2rem;
+    left: 2rem;
+    opacity: 1;
+  }
 }
 @media (max-width: 1100px) {
   .flex_block {
@@ -194,25 +237,24 @@ body {
     display: none;
   }
   .MainContainer {
-     
     -ms-grid-columns: 100%;
-     
+
     grid-template-columns: 100%;
     -ms-grid-rows: 50px 0.5rem 6fr 0.5rem 1fr;
     grid-template-rows: 50px 6fr 1fr;
-        grid-template-areas:
+    grid-template-areas:
       " h"
       "c"
       " f";
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-              padding: 1rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 1rem;
   }
   .burger.burger {
     display: block;
   }
- .video iframe {
+  .video iframe {
     width: 15rem;
     height: 10rem;
   }

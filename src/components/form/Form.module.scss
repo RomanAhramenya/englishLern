@@ -46,3 +46,18 @@
       bottom: 0.5rem;
       text-decoration: none;
   }
+
+  @media (max-width:500px) {
+    .container{
+      margin: 3rem auto;
+      width: 80%;
+      input{
+        font-size: 1rem;
+      }
+      input[type='submit']{
+        padding: 0.5rem 0.5rem;
+        font-size: 1rem;
+      
+      }
+    }
+  }

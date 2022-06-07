@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import CustomLink from '../components/CustomLink/CustomLink'
-import { useAppSelector } from '../hooks/redux-hook'
+import { useAppDispatch, useAppSelector } from '../hooks/redux-hook'
 import { useOutSideClick } from '../hooks/useOutSideClick'
-
+import {removeUser} from './../store/slice/AuthSlice'
 function Header() {
   const user = useAppSelector(state => state.user)
+  const dispatch = useAppDispatch()
   const [modal, setModal] = useState(false)
   const tooltipRef = useRef<null | HTMLParagraphElement>(null)
   const handlerClick = () => {
@@ -18,7 +19,6 @@ function Header() {
   }
   return (
     <header>
-      {user.user.email ? <><span>{user.user.email}</span><button>Выйти</button></> : <><Link to='/login'>Войти</Link> <Link to='/regestration'>Регистрация</Link></>}
         <div ref={tooltipRef} className='burger'>
         <button onClick={() => buttonHandler()} >&#9776;</button>
         {modal && <div className='desctop_modal'>
@@ -27,6 +27,10 @@ function Header() {
           <CustomLink to='/lesson3'>Урок №3</CustomLink>
         </div>}
       </div>
+      <div>
+      {user.user.email ? <><span className='user'>{user.user.email}</span><button className='removeUser' onClick={()=>dispatch(removeUser())}>Выйти</button></> : <><Link className='authButton'  to='/login'>Войти</Link> <Link className='authButton' to='/regestration'>Регистрация</Link></>}
+      </div>
+      
     </header>
   )
 }
