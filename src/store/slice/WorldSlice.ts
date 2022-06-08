@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { getWorlds, IWorld, setWorld } from "./WorldAction"
+import { deleteWorld, getWorlds, IWorld, setWorld } from "./WorldAction"
 
 
 interface IArrayWorld{
@@ -21,10 +21,7 @@ const WorldSlice = createSlice({
         [setWorld.fulfilled.type] : (state,action: PayloadAction<IWorld>) => {
             state.isLoading = false;
             state.error = '';
-            let find = state.worlds.find(item => item.world == action.payload.world)
-            if(!find)
-            state.worlds.push(action.payload)
-            
+            state.worlds.unshift(action.payload)
         },
         [setWorld.pending.type] : (state) => {
             state.isLoading = true
@@ -36,13 +33,26 @@ const WorldSlice = createSlice({
         [getWorlds.fulfilled.type] : (state,action: PayloadAction<IWorld[]>) => {
             state.isLoading = false;
             state.error = '';
-            state.worlds = action.payload
+            state.worlds = action.payload.reverse()
             
         },
         [getWorlds.pending.type] : (state) => {
             state.isLoading = true
         },
         [getWorlds.rejected.type] : (state, action: PayloadAction<string>) => {
+            state.isLoading = false;
+            state.error = action.payload
+        },
+        [deleteWorld.fulfilled.type] : (state,action: PayloadAction<any>) => {
+            state.worlds =  state.worlds.filter(item => item.id !== action.payload.id)
+            state.isLoading = false;
+            state.error = '';
+            
+        },
+        [deleteWorld.pending.type] : (state) => {
+            state.isLoading = true
+        },
+        [deleteWorld.rejected.type] : (state, action: PayloadAction<string>) => {
             state.isLoading = false;
             state.error = action.payload
         },

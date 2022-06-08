@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import CustomLink from '../components/CustomLink/CustomLink'
 import { useAppDispatch, useAppSelector } from '../hooks/redux-hook'
+import { useAuth } from '../hooks/useAuth'
 import { useOutSideClick } from '../hooks/useOutSideClick'
 import {removeUser} from './../store/slice/AuthSlice'
 function Header() {
@@ -17,6 +18,7 @@ function Header() {
     setModal(!modal)
     console.log(modal)
   }
+  const auth = useAuth()
   return (
     <header>
         <div ref={tooltipRef} className='burger'>
@@ -25,6 +27,7 @@ function Header() {
           <CustomLink to='/'>Урок №1</CustomLink>
           <CustomLink to='/lesson2'>Урок №2</CustomLink>
           <CustomLink to='/lesson3'>Урок №3</CustomLink>
+          <CustomLink to={auth.isAuth ? '/worlds' : '/login'}>Словарь</CustomLink>
         </div>}
       </div>
       <div>

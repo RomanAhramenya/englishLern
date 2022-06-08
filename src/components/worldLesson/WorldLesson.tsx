@@ -16,8 +16,8 @@ const WorldLesson: FC<IProps> = ({ data }) => {
     const auth = localStorage.getItem('id')
     const buttonHandler = (world:string,translate:string,id:string) => {
         if(auth){
-            debugger
-            dispatch(setWorld({id,world:{world,translate,id}}))
+            
+            dispatch(setWorld({id:auth,world:{world,translate,id}}))
         }
     }
     return (
