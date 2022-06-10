@@ -14,7 +14,7 @@ const AddWorldForm:FC<IAddWorld> = ({action}) => {
     const date =  Date.now()
    const handlerAddWorld = () => {
        
-       action(value1,value2,String(date))
+       action(value1.toLowerCase(),value2.toLowerCase(),String(date))
         setValue1('')
         setValue2('')
    }

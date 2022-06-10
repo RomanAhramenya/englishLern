@@ -26,9 +26,7 @@ const WorldList: FC<IWorldList> = ({ dataWorld, currentPage, action }) => {
         return Math.floor(Math.random() * (max - min)) + min;
       }
       
-   console.log(question)
     const nextHandler = () =>{
-        
         setQuestion(getRandomInt(1,arrayWorldTrain.length))
         setResponse(false)
         setValue('')
@@ -58,12 +56,12 @@ const WorldList: FC<IWorldList> = ({ dataWorld, currentPage, action }) => {
                     </div>
             })}
             <span onClick={() => setIsTrain(!isTrain)} className={s.train}>Тренировка слов</span>
-            {isTrain && <div className={s.start_train_info}><span>Выберите слова(Двойной клик для отмены слова)</span> <button onClick={()=>setIsStartTrain(true)}>начать</button></div>}
+            {isTrain && <div className={s.start_train_info}><span>Выберите слова(Двойной клик для отмены слова)</span> <button disabled={!arrayWorldTrain.length} onClick={()=>setIsStartTrain(true)}>начать</button></div>}
             {isStartTrain && <div className={s.gameBoard}>
-               <span>{arrayWorldTrain[question].translate}</span> <input placeholder='Ответ' value={value} onChange={e => setValue(e.currentTarget.value)} type='text'/> 
+               <span>слово: "{arrayWorldTrain[question].translate}"</span> <input placeholder='Ответ' value={value} onChange={e => setValue(e.currentTarget.value)} type='text'/> 
                 <button onClick={()=>setResponse(true)}>ответить</button><button onClick={()=>nextHandler()} >следующий вопрос</button>
                 <button onClick={()=>endHandler()} >Завершить</button>
-                {response && <span>{value === arrayWorldTrain[question].world ? 'верно' : 'не верно'}</span>}
+                {response && <span>Результат: {value.toLowerCase() === arrayWorldTrain[question].world ? 'верно' : 'не верно'}</span>}
                 </div>}
         </div>
     )
