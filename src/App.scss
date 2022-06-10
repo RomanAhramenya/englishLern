@@ -124,6 +124,7 @@ body {
     border-radius: 10px;
     -webkit-animation: modal 0.25s linear;
     animation: modal 0.25s linear;
+    z-index: 1;
     a {
       text-decoration: none;
       color: white;
